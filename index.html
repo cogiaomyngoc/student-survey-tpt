@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phiếu thông tin học sinh 2026–2027</title>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#687386;--line:#dfe5ee;--primary:#2563eb;--danger:#dc2626;--ok:#16a34a;--shadow:0 12px 34px rgba(27,39,68,.09);--radius:18px}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#f8fbff,#f2f5fa);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,95vw);margin:20px auto 40px}
+.header{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:14px}.header h1{margin:0;font-size:clamp(24px,3vw,34px)}.header p{margin:4px 0 0;color:var(--muted)}
+.nav{display:flex;gap:8px}.nav button{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:11px;font-weight:800}.nav button.active{background:var(--primary);color:#fff}
+.card{background:#fff;border:1px solid #e6ebf2;border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:15px}
+.title{font-size:18px;font-weight:900;margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid #edf1f5}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.full{grid-column:1/-1}
+label.lbl{display:block;font-weight:800;font-size:13px;margin-bottom:6px}.req:after{content:" *";color:var(--danger)}
+input[type=text],input[type=date],input[type=tel],input[type=number],select,textarea{width:100%;border:1px solid var(--line);border-radius:11px;padding:10px 11px;background:#fff;outline:none}
+textarea{min-height:85px;resize:vertical}.options{display:grid;gap:8px}.opt{display:flex;gap:8px;align-items:flex-start;padding:9px 10px;border:1px solid #e7ecf3;border-radius:11px;background:#fbfcfe}.opt input{margin-top:3px}
+.cond{display:none;margin:9px 0 0 26px;padding:12px;border-left:3px solid #8fb3ff;background:#f7faff;border-radius:8px}.cond.show{display:block}
+.note{font-size:12px;color:var(--muted);line-height:1.45}.actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:14px}.btn{border:0;border-radius:11px;padding:10px 13px;font-weight:850}.primary{background:var(--primary);color:#fff}.soft{background:#eef3fb;color:#29405f}.danger{background:#fff1f1;color:#b42318;border:1px solid #ffd4d4}.ok{background:#ebf8ef;color:#137333;border:1px solid #ccebd6}
+.status{padding:10px 12px;border:1px solid #e6ebf3;background:#f7f9fc;border-radius:11px;font-size:13px}.status.good{color:#116b2f;background:#effaf3;border-color:#cbead5}.status.bad{color:#a61b1b;background:#fff2f2;border-color:#ffd3d3}
+.hide{display:none!important}.tablewrap{overflow:auto;border:1px solid #e5eaf2;border-radius:12px}table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:9px 10px;border-bottom:1px solid #edf1f5;text-align:left;font-size:13px;vertical-align:top}th{background:#f8fafc;color:#475467;font-size:12px}
+.rowbtns{display:flex;gap:5px;flex-wrap:wrap}.rowbtns button{border:1px solid #dbe2ec;background:#fff;border-radius:8px;padding:6px 8px;font-size:12px;font-weight:750}
+.toolbar{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}.toolbar .group{display:flex;gap:8px;flex-wrap:wrap}.toolbar input,.toolbar select{width:auto;min-width:180px}
+.login{max-width:450px;margin:50px auto;text-align:center}#googleBtn{display:flex;justify-content:center;margin:14px 0}
+.user{display:flex;gap:8px;align-items:center;padding:7px 9px;border:1px solid #e5eaf2;border-radius:11px}.user img{width:34px;height:34px;border-radius:50%}.small{font-size:12px;color:var(--muted)}
+.modal{position:fixed;inset:0;z-index:9999;background:rgba(15,23,42,.48);display:none;align-items:center;justify-content:center;padding:16px}.modal.show{display:flex}.modalbox{width:min(900px,96vw);max-height:92vh;overflow:auto;background:#fff;border-radius:18px;padding:18px}
+.modalhead{display:flex;justify-content:space-between;align-items:center}.modalhead h3{margin:0}.x{border:0;background:#eef2f7;border-radius:9px;padding:8px 10px;font-weight:900}
+#printArea{display:none}
+@media(max-width:760px){.grid,.grid3{grid-template-columns:1fr}.header{align-items:flex-start;flex-direction:column}.toolbar .group,.toolbar input,.toolbar select{width:100%}}
+@media print{@page{size:A4;margin:12mm}body>*{display:none!important}#printArea{display:block!important;color:#000;font-family:"Times New Roman",serif}.page{page-break-after:always}.page:last-child{page-break-after:auto}.psec{font-weight:bold;margin:10px 0 5px}.pline{margin:4px 0;line-height:1.4}#printArea table{min-width:0;width:100%;border-collapse:collapse}#printArea th,#printArea td{border:1px solid #000;padding:5px;font-size:12px}.sign{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;gap:20px;margin-top:28px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="header">
+    <div><h1>Phiếu thông tin học sinh</h1><p>Năm học 2026–2027 • Trường THCS và THPT Tân Phú Trung</p></div>
+    <div class="nav"><button id="tabSurvey" class="active">📝 Khảo sát</button><button id="tabAdmin">🔐 Quản lý</button></div>
+  </div>
+
+  <section id="surveyView">
+    <form id="form">
+      <div class="card">
+        <div class="title">I. THÔNG TIN CÁ NHÂN HỌC SINH</div>
+        <div class="grid">
+          <div><label class="lbl req">Lớp</label><input name="className" required></div>
+          <div><label class="lbl req">Họ và tên học sinh</label><input name="studentName" required></div>
+          <div><label class="lbl req">Ngày sinh</label><input name="dob" type="date" required></div>
+          <div><label class="lbl req">Giới tính</label><select name="gender" required><option value="">— Chọn —</option><option>Nam</option><option>Nữ</option><option>Khác</option></select></div>
+          <div><label class="lbl">Dân tộc</label><input name="ethnicity"></div>
+          <div><label class="lbl">Nơi sinh (tỉnh/thành phố)</label><input name="birthPlace"></div>
+          <div><label class="lbl">Nơi khai sinh</label><input name="birthRegistrationPlace"></div>
+          <div><label class="lbl">Số định danh cá nhân</label><input name="personalId" inputmode="numeric"></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <label class="lbl">Thông tin về CC/CCCD</label>
+          <div class="options">
+            <label class="opt"><input type="radio" name="cccdStatus" value="Đã làm CC/CCCD"> Đã làm CC/CCCD</label>
+            <div id="cccdBox" class="cond">
+              <div class="grid">
+                <div><label class="lbl req">Ngày cấp CC/CCCD</label><input id="cccdIssueDate" name="cccdIssueDate" type="date"></div>
+                <div><label class="lbl req">Số điện thoại đã đăng ký</label><input id="cccdRegisteredPhone" name="cccdRegisteredPhone" type="tel" placeholder="0901234567"></div>
+              </div>
+              <div class="note">Khi chọn “Đã làm CC/CCCD”, 2 mục này bắt buộc phải nhập.</div>
+            </div>
+            <label class="opt"><input type="radio" name="cccdStatus" value="Chưa làm CC/CCCD"> Chưa làm CC/CCCD</label>
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <label class="lbl">Tài khoản định danh điện tử</label>
+          <div class="options">
+            <label class="opt"><input type="radio" name="eidStatus" value="Đã kích hoạt mức 2 và tích hợp BHYT"> Đã có tài khoản định danh điện tử, đã kích hoạt mức 2 và tích hợp BHYT</label>
+            <label class="opt"><input type="radio" name="eidStatus" value="Chưa kích hoạt mức 2"> Đã có tài khoản định danh điện tử nhưng chưa kích hoạt mức 2</label>
+            <label class="opt"><input type="radio" name="eidStatus" value="Chưa có tài khoản định danh điện tử"> Chưa có tài khoản định danh điện tử</label>
+          </div>
+        </div>
+
+        <div class="grid3" style="margin-top:16px">
+          <div class="full"><label class="lbl">Quê quán (ghi địa chỉ sau sáp nhập)</label></div>
+          <div><label class="lbl">Ấp/khóm</label><input name="hometownHamlet"></div>
+          <div><label class="lbl">Xã/phường</label><input name="hometownWard"></div>
+          <div><label class="lbl">Tỉnh/thành</label><input name="hometownProvince"></div>
+          <div class="full"><label class="lbl">Địa chỉ đang ở hiện tại</label></div>
+          <div><label class="lbl">Số nhà</label><input name="currentHouseNo"></div>
+          <div><label class="lbl">Tổ</label><input name="currentGroup"></div>
+          <div><label class="lbl">Ấp/khóm</label><input name="currentHamlet"></div>
+          <div><label class="lbl">Xã/phường</label><input name="currentWard"></div>
+          <div><label class="lbl">Tỉnh/thành</label><input name="currentProvince"></div>
+          <div><label class="lbl">Số điện thoại cá nhân</label><input name="studentPhone" type="tel"></div>
+        </div>
+
+        <div class="grid" style="margin-top:16px">
+          <div><label class="lbl">Zalo</label><input name="socialZalo"></div>
+          <div><label class="lbl">Facebook</label><input name="socialFacebook"></div>
+          <div><label class="lbl">TikTok</label><input name="socialTiktok"></div>
+          <div><label class="lbl">YouTube</label><input name="socialYoutube"></div>
+        </div>
+
+        <div style="margin-top:16px">
+          <label class="lbl">Học sinh đang sống cùng</label>
+          <div class="options">
+            <label class="opt"><input type="radio" name="livingWith" value="Cả bố và mẹ"> Cả bố và mẹ</label>
+            <label class="opt"><input type="radio" name="livingWith" value="Chỉ sống với Bố"> Chỉ sống với Bố</label>
+            <label class="opt"><input type="radio" name="livingWith" value="Chỉ sống với Mẹ"> Chỉ sống với Mẹ</label>
+            <label class="opt"><input type="radio" name="livingWith" value="Ông bà/Người giám hộ"> Ông bà/Người giám hộ</label>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:16px">
+          <div><label class="lbl">Kết quả học tập năm học 2025–2026</label><input name="previousAcademic"></div>
+          <div><label class="lbl">Kết quả rèn luyện năm học 2025–2026</label><input name="previousConduct"></div>
+          <div class="full"><label class="lbl">Năng khiếu</label><textarea name="talent"></textarea></div>
+          <div class="full"><label class="lbl">Sở thích nổi bật</label><textarea name="hobbies"></textarea></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">II. THÔNG TIN GIA ĐÌNH VÀ NGƯỜI GIÁM HỘ</div>
+        <div class="grid">
+          <div>
+            <h3>Thông tin của Cha</h3>
+            <label class="lbl">Họ và tên</label><input name="fatherName">
+            <label class="lbl" style="margin-top:9px">Năm sinh</label><input name="fatherBirthYear" type="number">
+            <label class="lbl" style="margin-top:9px">Nghề nghiệp / Nơi làm việc</label><textarea name="fatherJob"></textarea>
+            <label class="lbl" style="margin-top:9px">Số điện thoại (Zalo)</label><input name="fatherPhone" type="tel">
+            <label class="lbl" style="margin-top:9px">Số CC/CCCD</label><input name="fatherCccd">
+          </div>
+          <div>
+            <h3>Thông tin của Mẹ</h3>
+            <label class="lbl">Họ và tên</label><input name="motherName">
+            <label class="lbl" style="margin-top:9px">Năm sinh</label><input name="motherBirthYear" type="number">
+            <label class="lbl" style="margin-top:9px">Nghề nghiệp / Nơi làm việc</label><textarea name="motherJob"></textarea>
+            <label class="lbl" style="margin-top:9px">Số điện thoại (Zalo)</label><input name="motherPhone" type="tel">
+            <label class="lbl" style="margin-top:9px">Số CC/CCCD</label><input name="motherCccd">
+          </div>
+          <div><label class="lbl">Họ tên Người giám hộ (nếu không ở cùng Bố/Mẹ)</label><input name="guardianName"></div>
+          <div><label class="lbl">Mối quan hệ với học sinh</label><input name="guardianRelation"></div>
+          <div><label class="lbl">SĐT liên hệ người giám hộ</label><input name="guardianPhone" type="tel"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">III. ĐẶC ĐIỂM HOÀN CẢNH GIA ĐÌNH</div>
+        <label class="lbl">Thuộc diện chính sách/Hoàn cảnh (có thể chọn nhiều)</label>
+        <div class="options">
+          <label class="opt"><input type="checkbox" name="circumstance" value="Hộ nghèo"> Hộ nghèo</label>
+          <div id="poorBox" class="cond"><label class="lbl">Số sổ hộ nghèo</label><input name="poorBookNo"></div>
+          <label class="opt"><input type="checkbox" name="circumstance" value="Hộ cận nghèo"> Hộ cận nghèo</label>
+          <div id="nearPoorBox" class="cond"><label class="lbl">Số sổ hộ cận nghèo</label><input name="nearPoorBookNo"></div>
+          <label class="opt"><input type="checkbox" name="circumstance" value="Con thương binh / Bệnh binh"> Con thương binh / Bệnh binh</label>
+          <label class="opt"><input type="checkbox" name="circumstance" value="Mồ côi"> Mồ côi (Bố/Mẹ/Cả bố mẹ)</label>
+          <label class="opt"><input type="checkbox" name="circumstance" value="Cha mẹ ly hôn / Cha, mẹ đi làm xa"> Cha mẹ ly hôn / Cha, mẹ đi làm xa</label>
+          <label class="opt"><input type="checkbox" name="circumstance" value="Hoàn cảnh khó khăn đột xuất"> Hoàn cảnh khó khăn đột xuất</label>
+        </div>
+
+        <div style="margin-top:16px">
+          <label class="lbl">Phương tiện đi học chính</label>
+          <select name="transport" id="transport">
+            <option value="">— Chọn —</option><option>Xe đạp</option><option>Xe đạp điện</option><option>Xe gắn máy</option><option>Xe máy điện</option><option>Xe mô tô</option><option>Xe mô tô điện</option><option>Cha mẹ đưa đón</option><option>Đi bộ</option><option>Quá giang bạn</option>
+          </select>
+          <div id="transportBox" class="cond">
+            <div class="grid">
+              <div><label class="lbl">Công suất (nếu có)</label><input name="transportPower"></div>
+              <div><label class="lbl">Biển số (nếu có)</label><input name="transportPlate"></div>
+              <div><label class="lbl">Họ tên bạn (nếu quá giang)</label><input name="rideFriendName"></div>
+              <div><label class="lbl">Lớp của bạn</label><input name="rideFriendClass"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">IV. TÌNH TRẠNG SỨC KHỎE</div>
+        <div class="options">
+          <label class="opt"><input type="checkbox" name="healthStatus" value="Bình thường"> Bình thường</label>
+          <label class="opt"><input type="checkbox" name="healthStatus" value="Có bệnh lý cận thị/thị lực kém"> Có bệnh lý cận thị/thị lực kém</label>
+          <label class="opt"><input id="chronic" type="checkbox" name="healthStatus" value="Có bệnh mãn tính"> Có bệnh mãn tính (Tim mạch, hen suyễn, dị ứng, tiểu đường,...)</label>
+          <div id="chronicBox" class="cond"><label class="lbl req">Cụ thể</label><textarea id="chronicDetail" name="chronicDetail"></textarea></div>
+        </div>
+        <div style="margin-top:14px">
+          <label class="lbl">Học sinh có thuộc diện cần hỗ trợ đặc biệt/khuyết tật không?</label>
+          <div class="options">
+            <label class="opt"><input type="radio" name="specialSupport" value="Có"> Có</label>
+            <label class="opt"><input type="radio" name="specialSupport" value="Không"> Không</label>
+          </div>
+          <div id="supportBox" class="cond"><label class="lbl req">Ghi rõ dạng tật/mức độ để nhà trường hỗ trợ</label><textarea id="supportDetail" name="supportDetail"></textarea></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">V. MỐI QUAN HỆ BẠN BÈ</div>
+        <div class="tablewrap">
+          <table><thead><tr><th>Họ và tên</th><th>Lớp</th><th>Số điện thoại</th><th>Nick mạng xã hội</th></tr></thead><tbody id="friends"></tbody></table>
+        </div>
+        <div class="actions" style="justify-content:flex-start"><button type="button" id="addFriend" class="btn soft">+ Thêm bạn</button></div>
+      </div>
+
+      <div class="card">
+        <div class="title">VI. LỜI NHẮN, MONG MUỐN CỦA PHỤ HUYNH GỬI ĐẾN GVCN</div>
+        <textarea name="parentMessage"></textarea>
+        <label class="opt" style="margin-top:12px"><input id="confirm" type="checkbox" required> Tôi xác nhận các thông tin đã cung cấp là đúng.</label>
+        <div id="formStatus" class="status" style="margin-top:12px">Chưa gửi phiếu.</div>
+        <div class="actions"><button type="reset" class="btn soft">Làm lại</button><button id="submitBtn" class="btn primary">Gửi phiếu</button></div>
+      </div>
+    </form>
+  </section>
+
+  <section id="adminView" class="hide">
+    <div id="loginBox" class="card login">
+      <div style="font-size:42px">🔐</div><h2>Đăng nhập quản lý</h2>
+      <p class="small">Chỉ tài khoản Google được cấp quyền mới xem, sửa hoặc xóa dữ liệu.</p>
+      <div id="googleBtn"></div><div id="loginStatus" class="status">Đang chờ đăng nhập Google.</div>
+    </div>
+    <div id="adminPanel" class="hide">
+      <div class="card">
+        <div class="toolbar">
+          <div class="group"><input id="search" placeholder="Tìm tên / lớp / SĐT"><select id="classFilter"><option value="">Tất cả lớp</option></select><button id="reload" class="btn soft">↻ Tải lại</button></div>
+          <div class="group"><button id="csv" class="btn ok">Xuất CSV (Excel)</button><div id="adminUser" class="user"></div><button id="logout" class="btn danger">Đăng xuất</button></div>
+        </div>
+        <div id="adminStatus" class="status">Chưa tải dữ liệu.</div>
+      </div>
+      <div class="card">
+        <div class="title">Danh sách phiếu đã làm <span id="count"></span></div>
+        <div class="tablewrap"><table><thead><tr><th>Mã</th><th>Họ tên</th><th>Lớp</th><th>Ngày sinh</th><th>SĐT</th><th>Ngày gửi</th><th>Thao tác</th></tr></thead><tbody id="rows"></tbody></table></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="modal" class="modal"><div class="modalbox"><div class="modalhead"><h3 id="modalTitle">Hồ sơ</h3><button id="closeModal" class="x">✕</button></div><div id="modalContent"></div></div></div>
+<div id="printArea"></div>
+
+<script>
+const API_URL="https://script.google.com/macros/s/AKfycbzbC7cqgVCfGvheMe-o9nRf2GlQkoeuOSQvSPQMxicNDTS887NUhwMGOuKMHeRQ8hSq/exec";
+const GOOGLE_CLIENT_ID="949550796570-ci8gc10kr36tn08n2snmqv9v4l0mvbtq.apps.googleusercontent.com";
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));
+let token="", user=null, records=[], editingId=null, googleInit=false;
+
+function status(el,msg,type=""){el.textContent=msg;el.className="status"+(type?" "+type:"")}
+function phoneOk(v){const n=String(v||"").replace(/\D/g,"");return !n||(n.length>=9&&n.length<=11)}
+async function api(payload){
+  if(API_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) throw new Error("Chưa cấu hình API_URL.");
+  const r=await fetch(API_URL,{method:"POST",body:JSON.stringify(payload)});
+  const t=await r.text(); let j;
+  try{j=JSON.parse(t)}catch(e){throw new Error("Không đọc được phản hồi từ Apps Script.")}
+  if(!j.success) throw new Error(j.message||"Có lỗi xảy ra."); return j;
+}
+function addFriendRow(v={}){
+  const tr=document.createElement("tr");
+  tr.innerHTML=`<td><input data-f="name" value="${esc(v.name||"")}"></td><td><input data-f="className" value="${esc(v.className||"")}"></td><td><input data-f="phone" value="${esc(v.phone||"")}"></td><td><div style="display:flex;gap:5px"><input data-f="social" value="${esc(v.social||"")}"><button type="button" class="x rm">−</button></div></td>`;
+  $("#friends").appendChild(tr);
+}
+for(let i=0;i<4;i++)addFriendRow();
+$("#addFriend").onclick=()=>addFriendRow();
+$("#friends").onclick=e=>{if(e.target.classList.contains("rm"))e.target.closest("tr").remove()};
+
+function dynamic(){
+  const cccd=$('input[name="cccdStatus"]:checked')?.value==="Đã làm CC/CCCD";
+  $("#cccdBox").classList.toggle("show",cccd);$("#cccdIssueDate").required=cccd;$("#cccdRegisteredPhone").required=cccd;
+  if(!cccd){$("#cccdIssueDate").value="";$("#cccdRegisteredPhone").value=""}
+  const circ=$$('input[name="circumstance"]:checked').map(x=>x.value);
+  $("#poorBox").classList.toggle("show",circ.includes("Hộ nghèo"));$("#nearPoorBox").classList.toggle("show",circ.includes("Hộ cận nghèo"));
+  $("#transportBox").classList.toggle("show",!!$("#transport").value&& !["Xe đạp","Cha mẹ đưa đón","Đi bộ"].includes($("#transport").value));
+  $("#chronicBox").classList.toggle("show",$("#chronic").checked);$("#chronicDetail").required=$("#chronic").checked;if(!$("#chronic").checked)$("#chronicDetail").value="";
+  const sp=$('input[name="specialSupport"]:checked')?.value==="Có";$("#supportBox").classList.toggle("show",sp);$("#supportDetail").required=sp;if(!sp)$("#supportDetail").value="";
+}
+document.addEventListener("change",e=>{if(e.target.closest("#form"))dynamic()});
+
+function formData(){
+  const fd=new FormData($("#form")), d={};
+  for(const [k,v] of fd.entries()){if(d[k]!==undefined){if(!Array.isArray(d[k]))d[k]=[d[k]];d[k].push(v)}else d[k]=v}
+  d.friends=$$("#friends tr").map(tr=>Object.fromEntries([...tr.querySelectorAll("[data-f]")].map(x=>[x.dataset.f,x.value.trim()]))).filter(x=>Object.values(x).some(Boolean));
+  return d;
+}
+function validate(d){
+  if(d.cccdStatus==="Đã làm CC/CCCD"){
+    if(!d.cccdIssueDate)return"Vui lòng nhập ngày cấp CC/CCCD.";
+    if(!d.cccdRegisteredPhone)return"Vui lòng nhập số điện thoại đã đăng ký CC/CCCD.";
+    if(!phoneOk(d.cccdRegisteredPhone))return"Số điện thoại đăng ký CC/CCCD chưa hợp lệ.";
+  }
+  for(const k of ["studentPhone","fatherPhone","motherPhone","guardianPhone"])if(d[k]&&!phoneOk(d[k]))return"Có số điện thoại chưa đúng định dạng.";
+  return"";
+}
+$("#form").onsubmit=async e=>{
+  e.preventDefault();const d=formData(),err=validate(d);if(err){status($("#formStatus"),err,"bad");return}
+  $("#submitBtn").disabled=true;status($("#formStatus"),"Đang gửi phiếu...");
+  try{const r=await api({action:"submit",data:d});status($("#formStatus"),"✅ Đã gửi thành công. Mã hồ sơ: "+r.recordId,"good");e.target.reset();$("#friends").innerHTML="";for(let i=0;i<4;i++)addFriendRow();dynamic()}
+  catch(err){status($("#formStatus"),"❌ "+err.message,"bad")}finally{$("#submitBtn").disabled=false}
+};
+
+function surveyTab(){$("#surveyView").classList.remove("hide");$("#adminView").classList.add("hide");$("#tabSurvey").classList.add("active");$("#tabAdmin").classList.remove("active")}
+function adminTab(){$("#surveyView").classList.add("hide");$("#adminView").classList.remove("hide");$("#tabAdmin").classList.add("active");$("#tabSurvey").classList.remove("active");initGoogle()}
+$("#tabSurvey").onclick=surveyTab;$("#tabAdmin").onclick=adminTab;
+
+function jwt(t){try{const b=t.split(".")[1].replace(/-/g,"+").replace(/_/g,"/");return JSON.parse(decodeURIComponent(atob(b).split("").map(c=>"%" + ("00"+c.charCodeAt(0).toString(16)).slice(-2)).join("")))}catch(e){return null}}
+function initGoogle(){
+  if(token||googleInit)return;
+  if(GOOGLE_CLIENT_ID.includes("YOUR_GOOGLE_CLIENT_ID")){status($("#loginStatus"),"Chưa cấu hình GOOGLE_CLIENT_ID.","bad");return}
+  if(!window.google?.accounts?.id){setTimeout(initGoogle,500);return}
+  googleInit=true;google.accounts.id.initialize({client_id:GOOGLE_CLIENT_ID,callback:login});
+  google.accounts.id.renderButton($("#googleBtn"),{theme:"outline",size:"large",text:"signin_with",width:320});
+}
+async function login(r){
+  const p=jwt(r.credential);if(!p?.email){status($("#loginStatus"),"Không đọc được tài khoản Google.","bad");return}
+  status($("#loginStatus"),"Đang xác thực...");
+  try{await api({action:"adminLogin",token:r.credential});token=r.credential;user=p;$("#loginBox").classList.add("hide");$("#adminPanel").classList.remove("hide");$("#adminUser").innerHTML=`${p.picture?`<img src="${esc(p.picture)}">`:""}<div><b>${esc(p.name||"Quản trị")}</b><div class="small">${esc(p.email)}</div></div>`;await load()}
+  catch(err){status($("#loginStatus"),"❌ "+err.message,"bad")}
+}
+$("#logout").onclick=()=>{token="";user=null;records=[];$("#adminPanel").classList.add("hide");$("#loginBox").classList.remove("hide");if(window.google?.accounts?.id)google.accounts.id.disableAutoSelect();status($("#loginStatus"),"Đã đăng xuất.")};
+
+async function load(){
+  status($("#adminStatus"),"Đang tải dữ liệu...");
+  try{const r=await api({action:"list",token});records=r.records||[];fillClasses();render();status($("#adminStatus"),`Đã tải ${records.length} hồ sơ.`,"good")}
+  catch(err){status($("#adminStatus"),"❌ "+err.message,"bad")}
+}
+function fillClasses(){const cur=$("#classFilter").value, cs=[...new Set(records.map(r=>r.data?.className).filter(Boolean))].sort();$("#classFilter").innerHTML='<option value="">Tất cả lớp</option>'+cs.map(c=>`<option ${c===cur?"selected":""}>${esc(c)}</option>`).join("")}
+function filtered(){const q=$("#search").value.toLowerCase().trim(),c=$("#classFilter").value;return records.filter(r=>{const d=r.data||{},txt=[r.recordId,d.studentName,d.className,d.studentPhone,d.personalId].join(" ").toLowerCase();return(!q||txt.includes(q))&&(!c||d.className===c)})}
+function render(){
+  const a=filtered();$("#count").textContent="("+a.length+")";
+  $("#rows").innerHTML=a.length?a.map(r=>{const d=r.data||{};return`<tr><td>${esc(r.recordId)}</td><td><b>${esc(d.studentName)}</b></td><td>${esc(d.className)}</td><td>${esc(d.dob)}</td><td>${esc(d.studentPhone)}</td><td>${esc(r.createdAt)}</td><td><div class="rowbtns"><button data-a="view" data-id="${esc(r.recordId)}">Xem</button><button data-a="edit" data-id="${esc(r.recordId)}">Sửa</button><button data-a="pdf" data-id="${esc(r.recordId)}">PDF/In</button><button data-a="del" data-id="${esc(r.recordId)}" style="color:#b42318">Xóa</button></div></td></tr>`}).join(""):'<tr><td colspan="7">Không có hồ sơ.</td></tr>';
+}
+$("#search").oninput=render;$("#classFilter").onchange=render;$("#reload").onclick=load;
+$("#rows").onclick=async e=>{
+  const b=e.target.closest("button[data-a]");if(!b)return;const r=records.find(x=>x.recordId===b.dataset.id);if(!r)return;
+  if(b.dataset.a==="view")return modal(r,false);if(b.dataset.a==="edit")return modal(r,true);if(b.dataset.a==="pdf")return printRec(r);
+  if(b.dataset.a==="del"){if(!confirm("Xóa hồ sơ "+(r.data?.studentName||r.recordId)+"?"))return;try{await api({action:"delete",token,recordId:r.recordId});records=records.filter(x=>x.recordId!==r.recordId);render();status($("#adminStatus"),"Đã xóa hồ sơ.","good")}catch(err){status($("#adminStatus"),err.message,"bad")}}
+};
+function modal(r,edit){
+  editingId=r.recordId;const d=r.data||{}, fields=[["className","Lớp"],["studentName","Họ tên"],["dob","Ngày sinh"],["gender","Giới tính"],["ethnicity","Dân tộc"],["birthPlace","Nơi sinh"],["personalId","Số định danh"],["cccdStatus","Trạng thái CC/CCCD"],["cccdIssueDate","Ngày cấp"],["cccdRegisteredPhone","SĐT đăng ký CC/CCCD"],["studentPhone","SĐT học sinh"],["fatherName","Cha"],["fatherPhone","SĐT cha"],["motherName","Mẹ"],["motherPhone","SĐT mẹ"],["guardianName","Người giám hộ"],["guardianPhone","SĐT người giám hộ"],["transport","Phương tiện"],["chronicDetail","Bệnh mãn tính"],["supportDetail","Hỗ trợ đặc biệt"],["parentMessage","Lời nhắn"]];
+  $("#modalTitle").textContent=(edit?"Chỉnh sửa: ":"Hồ sơ: ")+(d.studentName||r.recordId);
+  $("#modalContent").innerHTML=`<div class="grid">${fields.map(([k,l])=>`<div class="${["parentMessage","chronicDetail","supportDetail"].includes(k)?"full":""}"><label class="lbl">${esc(l)}</label>${["parentMessage","chronicDetail","supportDetail"].includes(k)?`<textarea data-e="${k}" ${edit?"":"disabled"}>${esc(d[k]||"")}</textarea>`:`<input data-e="${k}" value="${esc(d[k]||"")}" ${edit?"":"disabled"}>`}</div>`).join("")}</div><div class="actions"><button class="btn soft" onclick="document.getElementById('modal').classList.remove('show')">Đóng</button>${edit?'<button id="saveEdit" class="btn primary">Lưu thay đổi</button>':""}</div>`;
+  $("#modal").classList.add("show");if(edit)$("#saveEdit").onclick=saveEdit;
+}
+async function saveEdit(){
+  const r=records.find(x=>x.recordId===editingId),d=JSON.parse(JSON.stringify(r.data||{}));$$("[data-e]").forEach(x=>d[x.dataset.e]=x.value.trim());
+  try{await api({action:"update",token,recordId:editingId,data:d});r.data=d;$("#modal").classList.remove("show");render();status($("#adminStatus"),"Đã cập nhật hồ sơ.","good")}catch(err){alert(err.message)}
+}
+$("#closeModal").onclick=()=>$("#modal").classList.remove("show");
+
+$("#csv").onclick=()=>{
+  const a=filtered(),head=["Mã","Ngày tạo","Lớp","Họ tên","Ngày sinh","Giới tính","Số định danh","SĐT học sinh","Cha","SĐT cha","Mẹ","SĐT mẹ"],rows=a.map(r=>{const d=r.data||{};return[r.recordId,r.createdAt,d.className,d.studentName,d.dob,d.gender,d.personalId,d.studentPhone,d.fatherName,d.fatherPhone,d.motherName,d.motherPhone]});
+  const csv=[head,...rows].map(row=>row.map(v=>`"${String(v??"").replace(/"/g,'""')}"`).join(",")).join("\r\n"),blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"}),link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="danh-sach-hoc-sinh.csv";link.click();URL.revokeObjectURL(link.href)
+};
+
+const ck=x=>x?"☒":"☐",line=(l,v)=>`<div class="pline"><b>${esc(l)}:</b> ${esc(v||"")}</div>`;
+function printRec(r){
+  const d=r.data||{},circ=Array.isArray(d.circumstance)?d.circumstance:(d.circumstance?[d.circumstance]:[]),health=Array.isArray(d.healthStatus)?d.healthStatus:(d.healthStatus?[d.healthStatus]:[]),friends=Array.isArray(d.friends)?d.friends:[];
+  $("#printArea").innerHTML=`<div class="page"><h2 style="text-align:center">PHIẾU THÔNG TIN HỌC SINH ĐẦU NĂM HỌC 2026–2027</h2><h3 style="text-align:center">TRƯỜNG THCS VÀ THPT TÂN PHÚ TRUNG</h3><div style="text-align:center"><b>LỚP: ${esc(d.className||"")}</b></div><div class="psec">I. THÔNG TIN CÁ NHÂN HỌC SINH</div>${line("Họ và tên",d.studentName)}${line("Ngày sinh",d.dob)}${line("Giới tính",d.gender)}${line("Dân tộc",d.ethnicity)}${line("Nơi sinh",d.birthPlace)}${line("Số định danh cá nhân",d.personalId)}<div class="pline">${ck(d.cccdStatus==="Đã làm CC/CCCD")} Đã làm CC/CCCD • Ngày cấp: <b>${esc(d.cccdIssueDate||"")}</b> • SĐT đăng ký: <b>${esc(d.cccdRegisteredPhone||"")}</b></div><div class="pline">${ck(d.cccdStatus==="Chưa làm CC/CCCD")} Chưa làm CC/CCCD</div>${line("Định danh điện tử",d.eidStatus)}${line("Quê quán",[d.hometownHamlet,d.hometownWard,d.hometownProvince].filter(Boolean).join(", "))}${line("Địa chỉ hiện tại",[d.currentHouseNo,d.currentGroup,d.currentHamlet,d.currentWard,d.currentProvince].filter(Boolean).join(", "))}${line("SĐT cá nhân",d.studentPhone)}${line("Đang sống cùng",d.livingWith)}${line("Học tập",d.previousAcademic)}${line("Rèn luyện",d.previousConduct)}${line("Năng khiếu",d.talent)}${line("Sở thích",d.hobbies)}<div class="psec">II. THÔNG TIN GIA ĐÌNH VÀ NGƯỜI GIÁM HỘ</div><table><tr><th></th><th>Cha</th><th>Mẹ</th></tr><tr><td>Họ tên</td><td>${esc(d.fatherName||"")}</td><td>${esc(d.motherName||"")}</td></tr><tr><td>Năm sinh</td><td>${esc(d.fatherBirthYear||"")}</td><td>${esc(d.motherBirthYear||"")}</td></tr><tr><td>Nghề nghiệp / Nơi làm việc</td><td>${esc(d.fatherJob||"")}</td><td>${esc(d.motherJob||"")}</td></tr><tr><td>SĐT</td><td>${esc(d.fatherPhone||"")}</td><td>${esc(d.motherPhone||"")}</td></tr><tr><td>CC/CCCD</td><td>${esc(d.fatherCccd||"")}</td><td>${esc(d.motherCccd||"")}</td></tr></table>${line("Người giám hộ",d.guardianName)}${line("Mối quan hệ",d.guardianRelation)}${line("SĐT",d.guardianPhone)}</div><div class="page"><div class="psec">III. ĐẶC ĐIỂM HOÀN CẢNH GIA ĐÌNH</div>${["Hộ nghèo","Hộ cận nghèo","Con thương binh / Bệnh binh","Mồ côi","Cha mẹ ly hôn / Cha, mẹ đi làm xa","Hoàn cảnh khó khăn đột xuất"].map(x=>`<div class="pline">${ck(circ.includes(x))} ${esc(x)}</div>`).join("")}${line("Số sổ hộ nghèo",d.poorBookNo)}${line("Số sổ hộ cận nghèo",d.nearPoorBookNo)}${line("Phương tiện đi học",d.transport)}${line("Công suất",d.transportPower)}${line("Biển số",d.transportPlate)}<div class="psec">IV. TÌNH TRẠNG SỨC KHỎE</div>${["Bình thường","Có bệnh lý cận thị/thị lực kém","Có bệnh mãn tính"].map(x=>`<div class="pline">${ck(health.includes(x))} ${esc(x)}</div>`).join("")}${line("Cụ thể",d.chronicDetail)}${line("Cần hỗ trợ đặc biệt/khuyết tật",d.specialSupport)}${line("Dạng tật/mức độ",d.supportDetail)}<div class="psec">V. MỐI QUAN HỆ BẠN BÈ</div><table><tr><th>Họ và tên</th><th>Lớp</th><th>SĐT</th><th>Nick mạng xã hội</th></tr>${(friends.length?friends:[{},{},{},{}]).map(f=>`<tr><td>${esc(f.name||"")}</td><td>${esc(f.className||"")}</td><td>${esc(f.phone||"")}</td><td>${esc(f.social||"")}</td></tr>`).join("")}</table><div class="psec">VI. LỜI NHẮN CỦA PHỤ HUYNH GỬI ĐẾN GVCN</div><div class="pline">${esc(d.parentMessage||"")}</div><div class="sign"><div><b>Cha/mẹ học sinh</b><br><i>(Ký, ghi rõ họ và tên)</i></div><div><b>Học sinh</b><br><i>(Ký, ghi rõ họ và tên)</i></div><div><b>Giáo viên chủ nhiệm</b><br><i>(Ký, ghi rõ họ và tên)</i></div></div></div>`;
+  setTimeout(()=>window.print(),100)
+}
+dynamic();
+</script>
+</body>
+</html>
