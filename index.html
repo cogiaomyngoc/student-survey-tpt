@@ -452,8 +452,8 @@ th{background:#f8fafc;color:#475467;font-size:12px}
 /* =========================================================
    CẤU HÌNH
    ========================================================= */
-const API_URL = "https://script.google.com/macros/s/AKfycbw-pTj3qoaIFOQ1sDsjGDjFH3ygdrjGTUl3nFAL_EBuEBgDQ1WF6uP1AwpFJs-HNDp5/exec";
-const GOOGLE_CLIENT_ID = "949550796570-ci8gc10kr36tn08n2snmqv9v4l0mvbtq.apps.googleusercontent.com";
+const API_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+const GOOGLE_CLIENT_ID = "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com";
 
 /* =========================================================
    TIỆN ÍCH
@@ -688,6 +688,7 @@ function validateSurvey(data){
    ========================================================= */
 $("#surveyForm").addEventListener("submit", async e => {
   e.preventDefault();
+  const form = e.currentTarget; // Lưu reference trước khi await; e.currentTarget có thể thành null sau await
 
   const data = collectForm();
   const err = validateSurvey(data);
@@ -719,7 +720,7 @@ $("#surveyForm").addEventListener("submit", async e => {
     }else{
       const result = await api({action:"submit", data});
       showStatus($("#formStatus"), `✅ Đã gửi thành công. Mã hồ sơ: ${result.recordId}`, "good");
-      e.currentTarget.reset();
+      form.reset();
       resetFriends();
       updateDynamic();
       window.scrollTo({top:0,behavior:"smooth"});
